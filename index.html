@@ -1,0 +1,144 @@
+
+<!-- COPPY SOURCE CODE VUI LÒNG GHI NGUỒN. THANKS YOU ! -->
+<html>
+<head>
+  <title>ZOOM BY CYA </title>
+  <meta charset="utf-8" />
+  <link rel="icon" type="image/png" href="https://dailysieure.com/giaodien/images/favicon.ico">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
+  <meta name="description" content="ZOOM ONLINE FAKE BY TỜ RÚC" />
+  <meta name="keywords" content="zoom" />
+<!-- code JavaScript & css -->
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/axios@0.20.0/dist/axios.min.js"></script>
+<script src="https://cdn.stringee.com/sdk/web/2.2.1/stringee-web-sdk.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"> </script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.js" ></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.css"  />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/2.1.4/toastr.min.css" />
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css"/>
+
+  <!--     Fonts and icons     -->
+  <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
+
+
+  <!-- CSS Files -->
+  <link href="styles.css" rel="stylesheet" />
+
+  <style type="text/css">
+  [v-cloak] { display: none; }
+
+.header-highlight {
+  color: #ff4954;
+}
+
+.info {
+  padding: 1.5rem;
+}
+
+.container {
+  padding-top: 1rem;
+}
+
+#videos {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+#videos video {
+  flex: 1 1 50%;
+  padding: 0;
+  min-width: 0;
+}
+  </style>
+
+
+
+</head>
+<body class="off-canvas-sidebar" >
+    <div class="container" v-cloak id="app">
+        <div class="card card-pricing ">
+            <div class="card-body">
+                <div class="row">
+                <div class="ml-auto mr-auto ">
+                  <div class="card"  v-if="!room">
+                  <div class="card-header">
+              <h2 class="card-title">ỨNG DỤNG FAKE ZOOM BY <a href="https://facebook.com/cya07.me" style="color: red">TỜ RÚC</a></h2>
+                    </div>
+                    </div>
+ <div class="card-title"  v-if="room">
+<b class="btn btn-danger btn-round"> WELCOME ! </b>
+</div>
+        <button class="btn btn-info" v-if="!room" @click="createRoom">
+          Tạo Meeting
+        </button>
+
+        <button class="btn btn-info" v-if="!room" @click="joinWithId">
+          Join Meeting
+        </button>
+
+        <button class="btn btn-info" v-if="room" @click="publish(true)">
+          Share Desktop<br> <i>(chỉ áp dụng cho máy tính)</i>
+        </button>
+      
+<br>
+    <div v-if="roomId" class="info">
+        <p>Bạn đang ở trong room <strong>{{roomId}}</strong>.</p>
+        <p>
+          Gửi link này cho bạn bè cùng join room nhé
+          <a v-bind:href="roomUrl" target="_blank">{{roomUrl}}</a>.
+        </p>
+        <p>Hoặc bạn cũng có thể copy ID <input v-bind:value="roomU" target="_blank" id="myInput1" class="btn btn-round" onclick="myFunction1()"
+          readonly></input>để share.</p>
+    </div>
+                </div>
+                </div>
+            </div>  
+        </div>
+    </div>
+<div class="container">
+ <div class="card card-pricing ">
+            <div class="card-body">
+                <div class="row">
+                <div class="ml-auto mr-auto ">
+
+      <div id="videos"></div>
+</div>
+   </div>
+            </div>  
+        </div>
+    </div>
+
+
+<footer class="pt-2 border-top text-center">
+  <div class="container">
+    <div class="mx-auto mt-2 mb-2">
+      Bản Quyền Thuộc Về <a href="https://www.facebook.com/cya07.me">NGUYỄN VĂN TRÚC</a>
+        </div>
+  </div>
+</footer> 
+</body>
+<script src="/api.js"></script>
+  <script src="/script.js"></script>
+
+
+<!-- BẢN QUYỀN THUỘC VỀ NGUYỄN VĂN TRÚC -->
+<script>
+function myFunction1() {
+  /* Get the text field */
+  var copyText = document.getElementById("myInput1");
+
+  /* Select the text field */
+  copyText.select();
+  copyText.setSelectionRange(0, 99999); /*For mobile devices*/
+
+  /* Copy the text inside the text field */
+  document.execCommand("copy");
+
+  /* Alert the copied text */
+  alert("Đã Copy: " + copyText.value);
+}
+</script>
